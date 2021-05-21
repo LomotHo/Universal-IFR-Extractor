@@ -10,7 +10,8 @@ You can download an executable <a href="http://bios-mods.com/pub/donovan6000/Sof
 Changelog:
 
 v0.6.1 3/1/2021
-* support winXP, build with vs2019, by lomot.
+* support winXP, build with vs2019 by lomot. [Download here](https://github.com/LomotHo/Universal-IFR-Extractor/releases/tag/0.6.1)
+* 支持windows XP，使用vs2019构建，[下载](https://github.com/LomotHo/Universal-IFR-Extractor/releases/tag/0.6.1)
 
 v0.6 6/16/2014
 * Added support for multiple string packages being used by one form.
