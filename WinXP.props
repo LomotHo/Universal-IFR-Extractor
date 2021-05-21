@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+此属性表用于开启Windows XP支持。
+修订日期：2017-07-26
+    作者：mingkuang
+-->
+
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemDefinitionGroup Condition=" ('$(PlatformShortName)'=='x86') Or ('$(PlatformShortName)'=='x64') ">
+    <ClCompile>
+      <PreprocessorDefinitions >_ATL_XP_TARGETING=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <!--某些硬件不支持SSE2等高级指令-->
+      <EnableEnhancedInstructionSet Condition=" '$(PlatformShortName)'=='x86' ">NoExtensions</EnableEnhancedInstructionSet>
+      <!--当兼容XP时，对于非 exe 的需要禁用线程安全初始化。避免XP中在DllMain中使用TLS而崩溃-->
+      <AdditionalOptions Condition=" '$(ConfigurationType)'!='Application' ">/Zc:threadSafeInit- %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <!--当兼容XP时，x86程序最低版本为5.1，x64程序最低版本为5.2-->
+      <MinimumRequiredVersion Condition=" '$(PlatformShortName)'=='x86' ">5.01</MinimumRequiredVersion>
+      <MinimumRequiredVersion Condition=" '$(PlatformShortName)'=='x64' ">5.02</MinimumRequiredVersion>
+    </Link>
+  </ItemDefinitionGroup>
+</Project>

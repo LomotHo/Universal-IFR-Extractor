@@ -10,6 +10,7 @@
 using namespace std;
 
 
+
 // Manifest
 #pragma comment(linker,"\"/manifestdependency:type='win32' \
 name='Microsoft.Windows.Common-Controls' version='6.0.0.0' \
@@ -196,7 +197,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam) 
 			HWND copyrightText;
 			copyrightText = CreateWindowEx(WS_EX_TRANSPARENT,
 				TEXT("static"),
-				TEXT("© 2014 donovan6000"),
+				TEXT("?2014 donovan6000"),
 				WS_CHILD | WS_VISIBLE,
 				198, 81,
 				200, 25,
