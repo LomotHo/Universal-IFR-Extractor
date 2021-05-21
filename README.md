@@ -9,6 +9,9 @@ You can download an executable <a href="http://bios-mods.com/pub/donovan6000/Sof
 <br /><br /><br />
 Changelog:
 
+v0.6.1 3/1/2021
+* support winXP, build with vs2019, by lomot.
+
 v0.6 6/16/2014
 * Added support for multiple string packages being used by one form.
 
